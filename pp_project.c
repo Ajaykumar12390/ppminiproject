@@ -45,10 +45,10 @@ int determinedaycode(int year)
 
 int determineleapyear(int year)
 {
-	if(year % 4 == 0 || year%100 != 0 || year%400 == 0)
+	if(year % 4 == 0 && year%100 != 0 || year%400 == 0)
 	{
 		days_in_month[2] = 29;
-		return 0;
+		return 1;
 	}
 	else
 	{
